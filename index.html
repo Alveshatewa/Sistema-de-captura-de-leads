@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Leads</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="header">
+                <h1>Cadastre-se e receba nossas novidades</h1>
+                <p>Preencha seus dados para ficar por dentro das melhores oportunidades</p>
+            </div>
+            
+            <form id="leadForm" class="lead-form">
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+                    <span class="error-message" id="nomeError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label>Telefone</label>
+                    <div class="phone-container">
+                        <div class="ddd-group">
+                            <input 
+                                type="text" 
+                                id="ddd" 
+                                name="ddd" 
+                                placeholder="DDD"
+                                maxlength="2"
+                                required
+                            >
+                        </div>
+                        <div class="phone-group">
+                            <input 
+                                type="text" 
+                                id="telefone" 
+                                name="telefone" 
+                                placeholder="99999-9999"
+                                maxlength="10"
+                                required
+                            >
+                        </div>
+                    </div>
+                    <span class="error-message" id="telefoneError"></span>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Cadastrar</span>
+                    <div class="loading-spinner" id="loadingSpinner"></div>
+                </button>
+            </form>
+            
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h3>Cadastro realizado com sucesso!</h3>
+                <p>Em breve você receberá nossas novidades.</p>
+            </div>
+            
+            <div class="error-alert" id="errorAlert">
+                <div class="error-icon">⚠</div>
+                <h3>Ops! Algo deu errado</h3>
+                <p id="errorText">Tente novamente em alguns minutos.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
